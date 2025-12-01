@@ -3,338 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aicrea Design Updated</title>
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-
-         
         * {
-          margin: 0;
-          padding: 0;
-          box-sizing:border-box;
-          
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
+
         html, body {
-          width: 100%;
-          height: 100%;
-        }
-        main{
-            height:100%;
             width: 100%;
-            background-color: white;
+            height: 100%;
+            font-family: 'Gilroy-Bold';
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            z-index: 999;
+        }
+
+        header ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        main {
+            margin-top: 90px;
+            width: 100%;
             display: grid;
             grid-template-columns: 1fr 0.3fr 1fr;
-            grid-template-rows: 70px 350px 1fr;
-            grid-template-areas: "header header header"
-                                "sec1 sec1 sec2"
-                                "sec3 sec3 sec45 ";
-            grid-gap:40px;
-            padding:10px;
-            font-family: 'Gilroy-Bold';
-            
+            grid-template-rows: auto auto 1fr;
+            grid-template-areas:
+                "header header header"
+                "sec1 sec1 sec2"
+                "sec3 sec3 sec45";
+            grid-gap: 40px;
+            padding: 20px;
         }
-       header {
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed; /* FIXED HEADER */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: white; /* Background so text doesn't mix with bg */
-    padding: 10px 20px;
-    z-index: 9999; /* Always on top */
-}
-        main{
-            margin-top:80px;
-        }
-        header ul{
-            display: flex;
-            gap:60px;
-        }
-        header ul li{
-            list-style: none;
 
+        #sec1 {
+            grid-area: sec1;
+            font-size: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-        #sec1{
-            padding:15px;
-            /* background-color: aqua; */
-            grid-area:sec1;
-            border-radius:22px;
-            font-size: 4em;
-            text-align:left ;
-            font-weight: 900;
-        }
-        #sec2{
-            /* background-color:blanchedalmond; */
-            border-radius:22px;
-            background-image: url(https://plus.unsplash.com/premium_photo-1706142540660-c91ecd876b31?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+        #sec2 {
+            grid-area: sec2;
+            background-image: url('https://plus.unsplash.com/premium_photo-1706142540660-c91ecd876b31?q=80&w=725&auto=format&fit=crop');
             background-size: cover;
-            background-repeat: no-repeat;
+            border-radius: 22px;
         }
-        #sec3{
-            /* background-color: rgba(238, 216, 18, 0.453); */
+
+        #sec3 {
             grid-area: sec3;
-            border-radius:22px;
-        
+            color: grey;
+            font-size: 1rem;
         }
-        #sec4{
-            background-color: rgba(103, 13, 220, 0.507);
-            grid-area: sec4;
-            border-radius:22px;
-            background-image: url(https://images.unsplash.com/photo-1634726639252-0acac50f4229?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        #sec5{
-            background-color: rgba(255, 4, 0, 0.371);
-             grid-area: sec5;
-             border-radius:22px;
-             background-image: url(https://images.unsplash.com/photo-1653427949584-b05bc92e03b9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:left;
-        }
-        #sec45{
+
+        #sec45 {
+            grid-area: sec45;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-areas: "sec4 sec5";
-            grid-gap:40px;
+            grid-gap: 20px;
         }
-        #divele{
-            display:flex;
-            gap:15px;
-            align-items: center;
-        }
-        #btn1{
-            padding:10px;
-            border-radius: 50px;
-            width: 8rem;
-            display: flex;
-            align-items: center;
-            border:none;
-            transition: all ease 0.3s;
-            cursor:pointer;
-        }
-        #btn1:hover{
-            background-color: rgb(12, 2, 50);
-            color:white
-        }
-        #btn2{
-            height:40px;
-            width:110px;
-            border-radius: 120px;
-            background-image: url(https://plus.unsplash.com/premium_photo-1674476932923-a710c3f5f319?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+        #sec4, #sec5 {
+            min-height: 250px;
             background-size: cover;
-            background-repeat: no-repeat;
-            border: none;
+            background-position: center;
+            border-radius: 22px;
         }
-         #btn3{
-            height:40px;
-            width:180px;
-            border:5px solid black;
-            border-radius: 120px;
+
+        #sec4 {
+            background-image: url('https://images.unsplash.com/photo-1634726639252-0acac50f4229?q=80&w=880&auto=format&fit=crop');
+        }
+
+        #sec5 {
+            background-image: url('https://images.unsplash.com/photo-1653427949584-b05bc92e03b9?q=80&w=880&auto=format&fit=crop');
+        }
+
+        footer {
+            width: 100%;
             padding: 20px;
-            font-weight: 700;
+            background-color: #111;
+            color: #e6e6e6;
             text-align: center;
-            background-color: whitesmoke;
+            margin-top: 20px;
         }
-        #ic{
-            font-size: 2rem;
+
+        .dev-name {
+            color: #0ef;
+            font-weight: bold;
         }
-        #sec3{
-            padding:10px;
-            font-weight: 100;
-            color:grey;
+
+        @media screen and (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "sec1"
+                    "sec2"
+                    "sec3"
+                    "sec45";
+                padding: 15px;
+            }
+
+            #sec1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            #sec45 {
+                grid-template-columns: 1fr;
+            }
         }
-        #imgcontainer{
-            display:flex;
-            gap:20px;
-            align-items: center;
-        }
-      @media screen and (max-width: 768px) {
-    
-    main {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas:
-        "header"
-        "sec1"
-        "sec2"
-        "sec3"
-        "sec45";
-        grid-gap: 20px;
-        padding: 15px;
-    }
-
-    header ul {
-        gap: 10px;
-        font-size: 0.6rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #sec1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    #divele {
-        flex-direction: column;
-        gap: 10px;
-        position:relative;
-        top:38%;
-    }
-
-    #btn1, #btn2, #btn3 {
-        width: 100%;
-        max-width: 250px;
-        justify-content: center;
-    }
-
-    #sec2 {
-        width: 100%;
-        height: 250px;
-        background-position: center;
-    }
-
-    #sec3 {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    #imgcontainer {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #sec45 {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "sec4"
-        "sec5";
-        gap: 20px;
-        display:none;
-    }
-
-    #sec4, #sec5 {
-        height: 200px;
-        background-position: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #sec1 {
-        font-size: 1.7rem;
-    }
-
-    header ul {
-        gap: 10px;
-        font-size: 0.75rem;
-    }
-
-    #btn3 {
-        font-size: 0.8rem;
-    }
-}
-footer {
-  width: 100%;
-  padding: 20px;
-  background-color: #111;
-  color: #e6e6e6;
-  text-align: center;
-  font-family: 'Gilroy-Bold';
-  
-  margin-top: 20px;
-}
-
-footer .dev-name {
-  font-weight: 900;
-  color: #0ef;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin-top: 10px;
-  gap: 25px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #aaa;
-  transition: 0.3s ease-in-out;
-}
-
-.footer-links a:hover {
-  color: #fff;
-}
-
-
-
     </style>
 </head>
 <body>
-    <main>
-        <header> 
-            <h1>A<span><i>i</i></span>CREA</h1>
-            <ul>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Enterprise</li>
-                <li>Blog</li>
-                <li>Community</li>
-            </ul>
-            <div id="divele">
-                <h5>LogIn</h5>
-                <button id="btn1">LET'S TALK<i class="ri-arrow-right-circle-fill" id="ic"></i></button>
-            </div>
-        </header>
-        
-        
-        
-        
-        
-        <section id="sec1"><button id="btn2"></button>Advancing<br>
-        creativity with<br>
-    artificial <button id="btn3"><i class="ri-play-line"></i>HOW WE WORK </button>
-<br>intelligence.</section>
-        <section id="sec2"></section>
-        <section id="sec3">
-    Aicrea is an applied ai research company shaping the<br>
-    next era of art, entertainment and human creativity.
-    <br><br>
-    <div id="imgcontainer">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" 
-         width="120" alt="OpenAI Logo">
-    <img src="https://logo.svgcdn.com/logos/openai.svg" alt="OpenAI Logo" width="120">
-    <img src="https://logo.svgcdn.com/logos/openai.svg" alt="OpenAI Logo" width="120">
-    
+    <header>
+        <h1>A<i>i</i>CREA</h1>
+        <ul>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>Enterprise</li>
+            <li>Blog</li>
+            <li>Community</li>
+        </ul>
+    </header>
 
-    </div>
-</section>
+    <main>
+        <section id="sec1">
+            <p>Advancing<br>creativity with<br>artificial intelligence.</p>
+        </section>
+
+        <section id="sec2"></section>
+
+        <section id="sec3">
+            Aicrea is an applied ai research company shaping the next era of art,
+            entertainment and human creativity.
+        </section>
+
         <div id="sec45">
             <section id="sec4"></section>
-            <section id="sec5">
-                
-            </section>
+            <section id="sec5"></section>
         </div>
     </main>
+
     <footer>
-  <p>Developed by <span class="dev-name">Priyanshu Sarma</span> © 2025</p>
-  <ul class="footer-links">
-    <li><a href="#">Privacy Policy</a></li>
-    <li><a href="#">Terms</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</footer>
+        Developed by <span class="dev-name">Priyanshu Sarma</span> © 2025
+    </footer>
 </body>
 </html>
-
-
-
-
